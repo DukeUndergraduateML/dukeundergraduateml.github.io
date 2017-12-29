@@ -1,2 +1,2 @@
-# dukeundergraduateml.github.io
+# Duke ML
 Website for Duke ML
