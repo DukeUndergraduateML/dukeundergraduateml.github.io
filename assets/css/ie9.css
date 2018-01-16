@@ -1,0 +1,15 @@
+/*
+	Cogent by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Spotlight */
+
+	.spotlight .row {
+		display: block;
+	}
+
+	.spotlight h2 {
+		margin-top: 2em;
+	}

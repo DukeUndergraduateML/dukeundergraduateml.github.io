@@ -1,0 +1,22 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+/*
+	Cogent by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+/* Spotlight */
+
+	.spotlight {
+		.row {
+			@include vendor('display', 'block');
+		}
+
+		h2 {
+			margin-top: _size(element-margin);
+		}
+	}
