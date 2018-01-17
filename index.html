@@ -16,7 +16,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"3b737cd8fc63cf8ea30be8e23","lid":"aec3302dce"}) })</script>
+		<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+		<script type="text/javascript">
+			function subscribe() {
+				require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"3b737cd8fc63cf8ea30be8e23","lid":"aec3302dce"}) })
+			}
+		</script>
 	</head>
 	<body class="landing">
 
@@ -41,7 +46,7 @@
 					<h2>Duke Undergraduate Machine Learning</h2>
 					<p>Duke's premier undergraduate organization for machine learning and data science.</p>
 					<ul class="actions">
-						<li><a href="#" class="button special big">Stay connected.</a></li>
+						<li><a onclick="subscribe()" class="button special big">Stay connected.</a></li>
 						<li><a href="events.html" class="button big">Peek our events.</a></li>
 					</ul>
 				</div>
