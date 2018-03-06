@@ -1,2 +1,2 @@
-# Duke ML
-Website for Duke ML
+# Duke Undergraduate Machine Learning
+Website for Duke Undergraduate Machine Learning
