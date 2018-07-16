@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:fb="http://ogp.me/ns/fb#">
+	<head>
+		<meta charset="UTF-8">
+		<title>Duke Datathon</title>
+		<link rel="icon" href="icon.png">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta property="og:image" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/charts/Chart.js"></script>
+		<script src="js/numeral/numeral.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css" />
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<script>
+			$(function() {
+			$('a[href*=#]:not([href=#])').click(function() {
+			  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			    var target = $(this.hash);
+			    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			    if (target.length) {
+			      $('html,body').animate({
+			        scrollTop: target.offset().top
+			      }, 1000);
+			      return false;
+			    }
+			  }
+			});
+			});
+		</script>
+	</head>
+	<body class="landing">
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html"><span style="color:#001A57">Duke</span><span style="color:#white"> Datathon</span></a></h1>
+			<nav id="nav">
+				<ul style="font-size:20px">
+					<li><strong><a href="http://dukeml.org">Home</a></strong></li>
+					<li><strong><a href="#about">About</a></strong></li>
+					<li><strong><a href="#FAQ">FAQ</a></strong></li>
+					<li><strong><a href="#sponsors">Sponsors</a></strong></li>
+					<!-- li><a href="#prizes">Prizes</a></li -->
+					<!-- li><a href="#schedule">Schedule</a></li -->
+					<!-- li><a href="#judges">Judges</a></li -->
+				</ul>
+			</nav>
+		</header>
+		<!-- Banner -->
+		<section id="banner">
+			<br>
+			<br>
+			<br>
+			<h2><span style="color:#001A57;">Duke</span><span style="color:white"> Datathon</span></h2>
+			<p>Fall 2018 | Location TBD</p>
+			<center style="margin-top: -1.5em">
+				<a href = "#about" target="_blank"><i class="icon rounded color6 fa-arrow-down"></i></a>
+			</center>
+			<!-- center>
+				<div class="row 100%">
+					<div class="3u 12u$(medium)">
+						<div style="opacity: 0">*</div>
+					</div>
+					<div class="3u 12u$(medium)">
+						<a href="#" target="_blank" class="button big" style="margin-top: 20px;">Student Registration</a>
+					</div>
+					<div class="3u$ 12u$(medium)">
+						<a href="#" target="_blank" class="button big" target="_blank" style="margin-top: 20px;">Mentor Registration</a>
+					</div>
+					<div class="3u 12u$(medium)">
+						<div style="opacity: 0">*</div>
+					</div>
+				</div>
+			</center -->
+			<br>
+		</section>
+		<!-- One -->
+		<section id="about" class="wrapper style1 special">
+			<div class="container">
+				<header class="major">
+					<h2 style="margin-top: -30px">About</h2>
+					<p style="line-height: 135%; margin-bottom: 50px; margin-top: 0px; color: #474747">Duke's first-ever datathon. Attack a dataset and come up with an analysis and visualization while racing against the clock. Top teams will win prizes, and all students will have the opportunity to interact with industry and academic sponsors.</p>
+					<p style="line-height: 135%; color: #474747">
+						<strong style="font-size: 200%">200+</strong> students
+						<span style="margin-left: 30px"><strong style="font-size: 200%">16</strong> hours</span>
+						<span style="margin-left: 30px"><strong style="font-size: 200%">$5000+</strong> in prizes</span>
+						<span style="margin-left: 30px"><strong style="font-size: 200%">10+</strong> workshops</span>
+					</p>
+					<br>
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+							<p><strong style="font-size: 90%">How many of Glassdoor's <span style="font-weight:bold;">top ten</span> jobs relate to statistics or computer science? (ASA)?</strong></p>
+							<canvas id="topChart" width="200" height="200"></canvas>
+							<br><br>
+						</div>
+						<div class="4u 12u$(medium)">
+							<p><strong style="font-size: 90%">What's the average salary for a data scientist (ASA)?</strong></p>
+							<span><strong style="font-size: 400%">$110k</strong><span style="font-size:150%">/yr</span></span>
+							<br><br>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<p><strong style="font-size: 90%">What's the overall <span style="font-weight:bold;">job satisfaction</span> like for a data scientist? (ASA)?</strong></p>
+							<canvas id="satisfactionChart" width="200" height="200"></canvas>
+						</div>
+					</div>
+				</header>
+			</div>
+		</section>
+		<script src="js/chart.js"></script>
+		<!-- Two -->
+		<section id="FAQ" class="wrapper style3 special">
+			<div class="container">
+				<header class="major">
+					<h2 style="color:#F5F5F5">Frequently Asked Questions</h2>
+				</header>
+				<div class="row 150%">
+					<div class="4u 12u$(medium)">
+						<section class="box">
+							<h3 class="faqh3" style="font-size: 1.2em">Who can participate?</h3>
+							<p class="faqh3">Any undergraduate or graduate student (from any institution) can participate, including any major! However, just because you're not a student doesn't mean you can't help out. If you have a passion for statistics, computer science, or mathematics, and are interested in coming, please sign up to be a mentor or lead a workshop!</p>
+						</section>
+					</div>
+					<div class="4u 12u$(medium)">
+						<section class="box">
+							<h3 class="faqh3" style="font-size: 1.2em">What do I work on?</h3>
+							<p class="faqh3">We'll provide a few different datasets; after that, it's up to you! Torture the data any way you want to tackle a problem of your choosing, and use any programming languages, development stacks, APIs, and other tools you'd need.</p>
+						</section>
+					</div>
+					<div class="4u$ 12u$(medium)">
+						<section class="box">
+							<h3 class="faqh3" style="font-size: 1.2em">What if I don’t know how to code?</h3>
+							<p class="faqh3">Don't worry! We'll have mentors and workshops available to help you for the entire duration of the event.</p>
+						</section>
+					</div>
+				</div>
+				<div class="row 150%">
+					<div class="4u 12u$(medium)">
+						<section class="box">
+							<h3 class="faqh3" style="font-size: 1.2em">How much does it cost to attend?</h3>
+							<p class="faqh3">Short answer: nil. Long answer: $0.00. Yup! We'll provide you with the resources, tools, mentors, and food, all for free.</p>
+						</section>
+					</div>
+					<div class="4u 12u$(medium)">
+						<section class="box">
+							<h3 class="faqh3" style="font-size: 1.2em">What should I bring to the datathon?</h3>
+							<p class="faqh3">We'll provide the food, but you should bring:<br>
+								&nbsp&nbsp&nbsp&nbsp&nbspA laptop + charger<br>
+								&nbsp&nbsp&nbsp&nbsp&nbspA cellphone<br>
+								&nbsp&nbsp&nbsp&nbsp&nbspA student ID<br>
+							</p>
+						</section>
+					</div>
+					<div class="4u$ 12u$(medium)">
+						<section class="box">
+							<h3 class="faqh3" style="font-size: 1.2em">Can I work with a team?</h3>
+							<p class="faqh3">Yes! In fact, we encourage it! The maximum number of people on a team is four. However, if you would like to go solo or work with fewer people, that works as well. If you don't have a team yet, don't worry. We'll have a team building session right before the event starts.</p>
+						</section>
+					</div>
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+							<section class="box">
+								<h3 class="faqh3" style="font-size: 1.2em">Is travel covered?</h3>
+								<p class="faqh3">Unfortunately, travel is not covered for the Fall 2018 Duke Datathon, but may be in the future. We still hope to see you here!</p>
+							</section>
+						</div>
+						<div class="4u 12u$(medium)">
+							<section class="box">
+								<h3 class="faqh3" style="font-size: 1.2em">Who's organizing the datathon?</h3>
+								<p class="faqh3">The executive board of Duke Undergraduate Machine Learning. Check us out <a style="font-weight:bold;" href="http://dukeml.org/#team" target="_blank">here</a>.</p>
+							</section>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<section class="box">
+								<h3 class="faqh3" style="font-size: 1.2em">I still have more questions!</h3>
+								<p class="faqh3">If you have any questions that we have not addressed, don't hesitate to contact us at <a href="mailto:hello@dukeml.org" style="font-weight:bold;">hello@dukeml.org</a>. If you're interested in sponsoring Duke Datathon, please <a href="mailto:hello@dukeml.org" style="font-weight:bold;">contact us</a>!</p>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<!-- Three -->
+		<section id="sponsors" class="wrapper style1 special">
+			<div class="container">
+				<header class="major">
+					<h2 style="line-height: 10%">Sponsors</h2>
+				</header>
+				<!-- div class="row uniform">
+					<div class="12 12u$(medium)">
+					</div>
+				</div>
+				<br -->
+				<p style="font-size: 22px; text-align:center; margin-bottom: 0px">If you're interested in sponsoring Duke Datathon, please <a style="font-weight:bold;" href="mailto:hello@dukeml.org">contact us</a>!
+
+					<br><br>See our organization sponsors <a style="font-weight:bold;" href="http://dukeml.org/#sponsor" target="_blank">here</a>.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="4u 12u$(medium)">
+						<center>
+							<h3> More info: </h3>
+							<p>Need something else? Drop us a line at <a style="font-weight:bold;" href="mailto:hello@dukeml.org">hello@dukeml.org</a> or talk to anyone on our team.</p>
+						</center>
+					</div>
+					<div class="4u 12u$(medium)">
+						<center>
+							<h3> Connect with us! </h3>
+							<a href = "http://facebook.com/dukeundergradml/" target="_blank"><i class="icon rounded color1 fa-facebook"></i></a>
+							<br><br>
+						</center>
+					</div>
+					<div class="4u 12u$(medium)">
+						<center>
+							<h3> About this site: </h3>
+							<p></p>
+							<p style="margin-top: -20px;">Crafted and designed with love by Duke Undergraduate Machine Learning.</p>
+						</center>
+					</div>
+				</div>
+			</div>
+			<script>
+				document.getElementById("banner").style.height = 100;
+			</script>
+		</footer>
+	</body>
+</html>
