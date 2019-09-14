@@ -1096,33 +1096,3 @@ div.transbox {
     margin: 30px 200px;
     filter: alpha(opacity=60); /* For IE8 and earlier */
 }
-
-
-[class*='col-'] {
-    float: left;
-    min-height: 1px;
-    width: 16.66%;
-    /*-- our gutter -- */
-    padding: 12px;
-}
-
-.col-8{
-    width: 66.67%;
-}
-
-.col-4 {
-    width: 33.33%;
-}
-
-[class*='col-'] > p {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.row:before,
-.row:after {
-    content:"";
-    display: table ;
-    clear:both;
-}
