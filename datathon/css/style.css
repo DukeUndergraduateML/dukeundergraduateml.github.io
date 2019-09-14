@@ -1097,4 +1097,19 @@ div.transbox {
     filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
+.col-8{
+    width: 66.67%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+[class*='col-'] > p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
 
