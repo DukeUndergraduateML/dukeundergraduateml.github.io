@@ -803,7 +803,7 @@ input[type="button"]:disabled,
 body.landing #header {
     left: 0;
     position: absolute;
-    top: 0;
+    top: 10;
 }
 body.landing #header nav a {
     color: white;

@@ -41,8 +41,55 @@
 		</script>
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 		<link rel="shortcut icon" href="favicon.ico" />
+		<style>
+			.alert {
+			  padding: 20px;
+			  padding-top:30px;
+			  padding-bottom:30px;
+			  background-color: #f44336;
+			  color: white;
+			  opacity: 1;
+			  transition: opacity 0.6s;
+			  margin-bottom: 15px;
+			}
+
+			.alert.success {background-color: #04AA6D;}
+			.alert.info {background-color: #001A57; margin:0px;}
+			.alert.warning {background-color: #ff9800;}
+
+			.closebtn {
+			  margin-left: 15px;
+			  color: white;
+			  font-weight: bold;
+			  float: right;
+			  font-size: 22px;
+			  line-height: 20px;
+			  cursor: pointer;
+			  transition: 0.3s;
+			}
+
+			.closebtn:hover {
+			  color: black;
+			}
+		</style>
 	</head>
 	<body class="landing">
+		<div class="alert info row" style="">
+			<span class="closebtn">&times;</span>
+			This year's Datathon will be hosted in a hybrid format. We are committed to maintaining a healthy atmosphere for all attendees, and we will be following the advised COVID-19 protocols.
+		</div>
+		<script>
+			var close = document.getElementsByClassName("closebtn");
+			var i;
+
+			for (i = 0; i < close.length; i++) {
+				close[i].onclick = function(){
+				var div = this.parentElement;
+				div.style.opacity = "0";
+				setTimeout(function(){ div.style.display = "none"; }, 600);
+				}
+			}
+		</script>
 		<!-- Header -->
 		<header id="header">
 			<h1><a href="index.html"><span style="color:#001A57">Duke</span><span style="color:#001A57"> Datathon</span></a></h1>
@@ -57,14 +104,14 @@
 				</ul>
 			</nav>
 		</header>
-
 		<!-- Banner -->
 		<section id="banner">
 			<br><br>
 			<div>
 				<h2><span style="color:#001A57;">Duke</span><span style="color:#001A57"> Datathon</span></h2>
-				<p style="color:#173271">Nov 6- Nov 7, 2021| 9am - 9am EST | <a href="https://duke.zoom.us/j/92161233358"> Hybrid/In-Person (TBD)</a> </p>
-				<p style="color:#173271; font-size:1.5em; margin-top: -0.5em; margin-bottom: 0em">This year's Duke Datathon will be hosted in a hybrid format. We are committed to maintaining a healthy atmosphere for all attendees, and we will be following the advised COVID-19 protocols. </p>
+				<p style="color:#173271">Nov 6- Nov 7, 2021| 10:30am - 10:30am EST | <a href="https://duke.zoom.us/j/92161233358"> Hybrid</a> </p>
+
+				<!-- <p style="color:#173271; font-size:1.5em; margin-top: -0.5em; margin-bottom: 0em">This year's Duke Datathon will be hosted in a hybrid format. We are committed to maintaining a healthy atmosphere for all attendees, and we will be following the advised COVID-19 protocols. </p> -->
 				<a href="https://forms.gle/Lhqi49BYc8biTUux8" target="_blank" class="button big" style="margin-left: 2em; margin-right: 2em; margin-top: 1em">Students</a>
 				<a href="https://forms.gle/Rp4uM8F2yNMXEMBt6" target="_blank" class="button big" style="margin-left: 2em; margin-right: 2em; margin-top: 1em">Mentors</a>
 			</div>
@@ -123,27 +170,34 @@
 		<script src="js/chart.js"></script>
 
 		<!-- Five -->
-		<section id="schedule" style="background-color:#001a57" class="wrapper style1 special">
+		<section id="schedule" style="background-color:#001a57; padding: 3em 0em 4em;" class="wrapper style1 special">
 			<div class="container" style="color: white">
-				<header class="major">
+				<header class="major" style="margin-bottom: 2em;">
 					<h2 style="color: white">Schedule</h2>
 				</header>
 				<div class="container">
 					<div id="mrow" class="row lefted" id="scheduleID" style="line-height: 60%">
 						<div class="6u 12u$(medium)">
 							<h3 style="font-size: 1.2em; color: white">Saturday, November 6, 2021</h3>
-							<p class = "lefted"><i>Location: Hybrid or In-person (TBD)</i></p>
-							<p class = "lefted">9:00am ET - Kick-off Event</p>
-							<p class = "lefted">9:30am - Workshop: Data Analysis and Cleaning </p>
-							<p class = "lefted">11:00am - Workshop: Introduction to Training ML Models</p>
-							<p class = "lefted">12:00pm - Workshop: Network Optimization</p>
-							<p class = "lefted">1:00pm - Workshop: How to Collaborate on a Datathon Project</p>
-							<p class = "lefted">2:00pm ~ 6:00pm Sponsor Workshops and Drop-In Help Sessions</p>
+							<p class = "lefted"><i>Location: Hybrid</i></p>
+							<p class = "lefted">9:30am ET - Check in and t-shirt pick-up [Old Chem Lobby]</p>
+							<p class = "lefted">10:30am - Datathon Begins (Datasets Released). Start working on the <br> <br> dataset [in person workspaces: Old Chem / Wilkinson]</p>
+							<p class = "lefted">10:30-11:00am - Mingling - find your team! </p>
+							<p class = "lefted">10:30-11:30am - Workshop 1: Exploratory Data Analysis [Reuben 130]</p>
+							<p class = "lefted">12:30pm - Lunch [Old Chem Quad]</p>
+							<p class = "lefted">12:30-1:30pm - Games in the lawn [Old Chem Quad]</p>
+							<p class = "lefted">1:30-2:30pm - Workshop 2: Autonomous Driving - Shrey Gupta <br> <br> (Applied Intuition) [Zoom]</p>
+							<p class = "lefted">3-4pm - Workshop 3: How to get ML opportunities as an undergrad -<br> <br> Adithya Vellal [Old Chem 116]</p>
+							<p class = "lefted">4-5pm - Workshop 4: Reinforcement Learning - Jack Farley (DAML) <br> <br> [Old Chem 116]</p>
+							<p class = "lefted">6pm - Dinner </p>
+							<p class = "lefted">7-8pm - Dtech women & non-binary participant mixer [Colab conference room]</p>
+							<p class = "lefted">8-9pm - Trivia with prizes [TBD]</p>
 						</div>
 						<div class="6u 12u$(medium)">
 							<h3 style="font-size: 1.2em; color: white">Sunday, November 7, 2021</h3>
-							<p class = "lefted"><i>Location: Hybrid or In-person (TBD)</i></p>
-							<p class = "lefted">9:00am ET - Submission Deadline </a></p>
+							<p class = "lefted"><i>Location: Hybrid</i></p>
+							<p class = "lefted">10:30am ET - Submission Deadline </a></p>
+							<p class = "lefted">11:00am - Closing Remarks </a></p>
 						</div>
 					</div>
 				</div>
@@ -158,24 +212,24 @@
 				<div class="container">
 					<div class="row lefted" style="line-height: 120%; margin-left: 0%;">
 						<div class="3u 12u$(medium)">
-							<h3 style="font-size: 1.2em;">Data Analysis and Cleaning</h3>
-							<p class = "lefted" style="line-height: normal"> November 6, 2021 9am <a href="https://duke.zoom.us/j/92161233358"></a></p>
-							<p class = "lefted" style="margin-top: -1.25em"><i>Hybrid/In-person (TBD)</i></p>
+							<h3 style="font-size: 1.2em;">Exploratory Data Analysis </h3>
+							<p class = "lefted" style="line-height: normal"> November 6, 2021 10:30-11:30am <a href="https://duke.zoom.us/j/92161233358"></a></p>
+							<p class = "lefted" style="margin-top: -1.25em"><i>Reuben 130 - Duke ML</i></p>
 						</div>
 						<div class="3u 12u$(medium)">
-							<h3 style="font-size: 1.2em;">Introduction to Training ML Models</h3>
-							<p class = "lefted" style="line-height: normal"> November 6, 2021 11am <a href="https://duke.zoom.us/j/92161233358"></a></p>
-							<p class = "lefted" style="margin-top: -1.25em"><i>Hybrid/In-person (TBD)</i></p>
+							<h3 style="font-size: 1.2em;">Autonomous Driving </h3>
+							<p class = "lefted" style="line-height: normal"> November 6, 2021 1:30-2:30pm <a href="https://duke.zoom.us/j/92161233358"></a></p>
+							<p class = "lefted" style="margin-top: -1.25em"><i>Zoom - Shrey Gupta (Applied Intuition)</i></p>
 						</div>
 						<div class="3u 12u$(medium)">
-							<h3 style="font-size: 1.2em;">Network and Parameter Optimization</h3>
+							<h3 style="font-size: 1em;">How to get ML opportunities as an undergrad </h3>
 							<p class = "lefted" style="line-height: normal"> November 6, 2021 12pm  <a href="https://duke.zoom.us/j/92161233358"></a></p>
-							<p class = "lefted" style="margin-top: -1.25em"><i>Hybrid/In-person (TBD)</i></p>
+							<p class = "lefted" style="margin-top: -1.25em"><i>Old Chem 116 - Adithya Vellal</i></p>
 						</div>
 						<div class="3u 12u$(medium)">
-							<h3 style="font-size: 1.2em;">How to Start & Collaborate on a Datathon Project</h3>
-							<p class = "lefted" style="line-height: normal"> November 6, 2021 1pm  <a href="https://duke.zoom.us/j/92161233358"></a></p>
-							<p class = "lefted" style="margin-top: -1.25em"><i>Hybrid/In-person (TBD)</i></p>
+							<h3 style="font-size: 1.2em;">Reinforcement Learning</h3>
+							<p class = "lefted" style="line-height: normal"> November 6, 2021 4-5pm  <a href="https://duke.zoom.us/j/92161233358"></a></p>
+							<p class = "lefted" style="margin-top: -1.25em"><i>Old Chem 116 - Jack Farley (DAML)</i></p>
 						</div>
 					</div>
 				</div>
